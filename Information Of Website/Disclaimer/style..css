@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.for-new-link a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Search box - hidden by default with animation */
+.search-box {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-box.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Search input style */
+#searchInput {
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Suggestions list */
+.suggestions-list {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.suggestions-list li {
+  padding: 8px;
+  cursor: pointer;
+  color: yellow;
+  font-weight: 600;
+}
+
+.suggestions-list li:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* NavBar */
+nav {
+  background-color: yellow;
+  height: 50px;
+}
+
+#mobileMenu {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#mobileList li {
+  margin-top: 15px;
+}
+
+#mobileList {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 270px;
+  height: 250px;
+  background-color: yellow;
+  padding: 20px;
+  z-index: 1000;
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+#mobileList.open {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* animation for opening and closing the humberger menu and close */
+
+#menuIcon {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When menu is opening */
+#menuIcon.animate {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+
+/* First Section */
+.first-section {
+  border: none;
+  height: 150px;
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+  cursor: pointer;
+}
+
+.main-for-img {
+  height: 130px;
+}
+
+.main-for-img img {
+  width: 65px;
+}
+
+/* Second Section */
+
+.Second-section {
+  height: 270vh;
+  background-color: black;
+}
+
+.white-disclaimer h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.all-my-post-are-free h3 {
+  color: #313194;
+  text-align: center;
+}
+
+.im-not-voilating p {
+  color: yellow;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.Contact-us h1 {
+  color: red;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.we-remove-posting p {
+  color: yellow;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.copy-right {
+  margin-top: 40px;
+}
+
+.copy-right h1 {
+  color: red;
+  text-align: center;
+}
+
+.note-of-buttom-of-copy-right p {
+  color: yellow;
+  text-align: start;
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+.for-un-order-list_note ul {
+  color: yellow;
+  font-size: 0.8rem;
+}
+
+.for-un-order-list_note li {
+  margin-top: 20px;
+}
+
+.if-your-reduest p {
+  color: yellow;
+  font-size: 0.9rem;
+}
+
+/* Third Section */
+.third_section {
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+}
+
+.main_for_all_anime_third_s {
+  height: 35vh;
+  align-items: center;
+}
+
+/* Fourth Section */
+.fourth-section {
+  /* height: 400vh; */
+  background-color: #fef500;
+}
+
+.ABOUT_RAI p {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.discord_img {
+  display: flex;
+  justify-content: center;
+}
+
+.DISCLAMIMER p {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin-top: 40px;
+}
+
+.disclamimer_btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Query For IPAD */
+
+@media screen and (min-width: 768px) {
+  .Second-section {
+    height: 180vh;
+  }
+  .copy-right {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .for-un-order-list_note li {
+    list-style: inside;
+  }
+}
+
+/* Media Query For PC 1024px */
+
+@media screen and (min-width: 1024px) {
+  .Second-section {
+    height: 125vh;
+  }
+  .for-un-order-list_note li {
+    margin-left: 15px;
+  }
+}
+
+/* Media Query For PC 1080px */
+
+@media screen and (min-width: 1080px) {
+  .Second-section {
+    height: 135vh;
+  }
+
+  .for-un-order-list_note li {
+    margin-left: 45px;
+  }
+}

@@ -1,0 +1,447 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.for-new-link a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Search box - hidden by default with animation */
+.search-box {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-box.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Search input style */
+#searchInput {
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Suggestions list */
+.suggestions-list {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.suggestions-list li {
+  padding: 8px;
+  cursor: pointer;
+  color: yellow;
+  font-weight: 600;
+}
+
+.suggestions-list li:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* NavBar */
+nav {
+  background-color: yellow;
+  height: 50px;
+}
+
+#mobileMenu {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#mobileList li {
+  margin-top: 15px;
+}
+
+#mobileList {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 270px;
+  height: 250px;
+  background-color: yellow;
+  padding: 20px;
+  z-index: 1000;
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+#mobileList.open {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* animation for opening and closing the humberger menu and close */
+
+#menuIcon {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When menu is opening */
+#menuIcon.animate {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+/* First Section */
+.first-section {
+  border: none;
+  height: 150px;
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+  cursor: pointer;
+}
+
+.main-for-img {
+  height: 130px;
+}
+
+.main-for-img img {
+  width: 65px;
+}
+
+/* Second Section */
+.Second-section {
+  height: 700vh;
+  background-color: black;
+}
+
+.input-search-head h6 {
+  color: yellow;
+  font-size: 0.8rem;
+}
+
+.main-for-input-head-and-search {
+  align-content: center;
+  height: 30vh;
+}
+
+.input-search input {
+  background-color: black;
+  border: 1px solid rgba(233, 232, 232, 0.11);
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.input-search button {
+  padding: 10px;
+  background-color: red;
+  border: none;
+  font-size: 0.8rem;
+}
+
+.back-img {
+  height: 400px;
+  width: 300px;
+  background-image: url(img/Untitled\design\\(1\).png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 12px;
+  border-radius: 20px;
+}
+
+.back-img-info {
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  align-items: center;
+}
+
+.back-img-info button {
+  padding: 6px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  background: none;
+}
+
+.back-img-info a {
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.all_for_color h2 {
+  color: white;
+  margin-top: 30px;
+}
+
+.all_for_color p {
+  color: #e2da03;
+  margin-top: 30px;
+}
+
+/* Third Section */
+.third_section {
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+}
+
+.main_for_all_anime_third_s {
+  height: 35vh;
+  align-items: center;
+}
+
+/* Fourth Section */
+.fourth-section {
+  /* height: 400vh; */
+  background-color: #fef500;
+}
+
+.ABOUT_RAI p {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+
+.discord_img {
+  display: flex;
+  justify-content: center;
+}
+
+.DISCLAMIMER p {
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin-top: 40px;
+}
+
+.disclamimer_btn {
+  display: flex;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background-color: #7f7b00;
+  height: 35vh;
+}
+
+.copyright p {
+  font-size: 0.8rem;
+}
+
+.copyright span {
+  color: red;
+}
+
+/* Media Query For IPAD */
+@media screen and (min-width: 768px) {
+  .search-box {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: -300px;
+    background: black;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+
+    /* Replace display none with animation styles */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .search-box.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  nav {
+    width: 100%;
+    height: 15vh;
+  }
+
+  #mobileList {
+    position: absolute;
+    top: 100px;
+  }
+
+  .navbar-img img {
+    width: 65px;
+  }
+
+  /* First Section */
+  .first-section {
+    height: 300px;
+  }
+
+  .main-for-img {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .main-for-img img {
+    width: 160px;
+  }
+
+  /* Second Section */
+  .Second-section {
+    height: 450vh;
+  }
+
+  .input-search input {
+    width: 620px;
+  }
+
+  .back-img {
+    width: 740px;
+  }
+
+  /* Third Section */
+  .main_for_all_anime_third_s {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+  }
+
+  .main_for_all_anime_third_s img {
+    width: 160px;
+  }
+
+  /* Fourth Section */
+  .main-for-all-info-fourth-s {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query For PC 1024 */
+@media screen and (min-width: 1024px) {
+  .navbar-img img {
+    width: 80px;
+  }
+
+  /* First Section */
+  .main-for-img {
+    display: flex;
+    align-items: center;
+    height: 45vh;
+  }
+
+  .main-for-img img {
+    width: 150px;
+  }
+
+  /* Second Section */
+  .Second-section {
+    height: 340vh;
+  }
+
+  .input-search input {
+    width: 840px;
+    padding: 15px;
+  }
+
+  .input-search button {
+    padding: 18px;
+  }
+
+  .back-img {
+    width: 1000px;
+    height: 80vh;
+  }
+
+  .back-img-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+}
+
+/* Media Query For PC 1080 */
+@media screen and (min-width: 1080px) {
+  .search-box {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: -300px;
+    background: black;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+
+    /* Replace display none with animation styles */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .search-box.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* Second Section */
+  .Second-section {
+    height: 370vh;
+  }
+
+  .input-search input {
+    width: 1000px;
+  }
+
+  .back-img {
+    width: 1220px;
+    height: 90vh;
+  }
+}

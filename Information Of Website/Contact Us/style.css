@@ -1,0 +1,270 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.for-new-link a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Search box - hidden by default with animation */
+.search-box {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-box.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Search input style */
+#searchInput {
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Suggestions list */
+.suggestions-list {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.suggestions-list li {
+  padding: 8px;
+  cursor: pointer;
+  color: yellow;
+  font-weight: 600;
+}
+
+.suggestions-list li:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* NavBar */
+nav {
+  background-color: yellow;
+  height: 50px;
+}
+
+#mobileMenu {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+#mobileList li {
+  margin-top: 15px;
+}
+
+#mobileList {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 270px;
+  height: 250px;
+  background-color: yellow;
+  padding: 20px;
+  z-index: 1000;
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+#mobileList.open {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* animation for opening and closing the humberger menu and close */
+
+#menuIcon {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* When menu is opening */
+#menuIcon.animate {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+/* First Section */
+.first-section {
+  border: none;
+  height: 150px;
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+  cursor: pointer;
+}
+
+.main-for-img {
+  height: 130px;
+}
+
+.main-for-img img {
+  width: 65px;
+}
+
+/* Second Section */
+
+.Second-section {
+  height: 230vh;
+  background-color: black;
+}
+
+.CONTACT-US h1 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.welcome-to-the-rare-toon p {
+  color: yellow;
+  margin-top: 20px;
+  font-size: 0.8rem;
+}
+
+.for-DMCA-copyright h1 {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* chatgpt code for input */
+
+/* Contact Form Styling */
+.contact-form p {
+  color: yellow;
+  font-size: 0.8rem;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid yellow;
+  background-color: black;
+  padding: 6px;
+  width: 100%;
+  color: yellow;
+  border-radius: 5px;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #555; /* Dark placeholder for readability */
+}
+
+.contact-form button {
+  width: 296px;
+  background-color: red;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.contact-form button:hover {
+  background-color: black;
+  color: yellow;
+  border: 1px solid gray;
+}
+
+/* Keep background yellow on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: black;
+  color: yellow;
+}
+
+/* Override Chrome autofill turning white */
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill {
+  background-color: yellow !important;
+  -webkit-box-shadow: 0 0 0px 1000px yellow inset !important;
+  -webkit-text-fill-color: white !important;
+}
+
+/* Keep placeholder white */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: white;
+}
+
+/* Third Section */
+.third_section {
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+}
+
+.main_for_all_anime_third_s {
+  height: 35vh;
+  align-items: center;
+}
+
+/* Mediq Query For IPAD */
+
+@media screen and (min-width: 768px) {
+  .Second-section {
+    height: 185vh;
+  }
+}
+
+/* Mediq Query For PC 1024px */
+
+@media screen and (min-width: 1024px) {
+  .Second-section {
+    height: 145vh;
+  }
+}
+
+/* Mediq Query For PC 1080px */
+
+@media screen and (min-width: 1024px) {
+  .Second-section {
+    height: 155vh;
+  }
+}

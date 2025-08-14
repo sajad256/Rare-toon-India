@@ -1,0 +1,451 @@
+/* Dragon Ball */
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(Poppins/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.for-new-link a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Search box - hidden by default with smooth animation */
+.search-box {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: black;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  z-index: 1000;
+
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  pointer-events: none;
+  transition: 
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show search box with fade-in, scale and slide-down */
+.search-box.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Search input style */
+#searchInput {
+  width: 100%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #222;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Suggestions list */
+.suggestions-list {
+  list-style: none;
+  margin-top: 5px;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #111;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Suggestion item */
+.suggestions-list li {
+  padding: 8px;
+  cursor: pointer;
+  color: yellow;
+  font-weight: 600;
+}
+
+/* Hover suggestion */
+.suggestions-list li:hover {
+  background-color: #444;
+  color: white;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  justify-content: space-between;
+  background-color: #fbf203;
+}
+
+.navbar-img img {
+  width: 50px;
+}
+
+/* Mobile Menu container */
+#mobileMenu {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile Menu Icon (hamburger / close) */
+#menuIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Fade-out animation for icon swap */
+#menuIcon.fade-out {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+/* Mobile List (sidebar menu) */
+#mobileList {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 270px;
+  height: 250px;
+  background-color: yellow;
+  padding: 20px;
+  z-index: 1000;
+  transform: translateX(-100%) scale(0.9);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  pointer-events: none;
+}
+
+#mobileList.open {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#mobileList li {
+  margin-top: 15px;
+}
+
+/* First Section */
+.first-section {
+  border: none;
+  height: 150px;
+  background: linear-gradient(to bottom, #7030a0 0%, #7030a0 55%, #dab850 100%);
+  cursor: pointer;
+}
+
+.main-for-img {
+  height: 130px;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.main-for-img img {
+  width: 65px;
+}
+
+/* Second Section */
+.Second-section {
+  /* height: 1000vh; */
+  background-color: black;
+}
+
+/* code for text animation */
+
+/* Fade + slide from left */
+@keyframes fadeSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply to your heading */
+.fw-bold {
+  opacity: 0;
+  animation: fadeSlideRight 0.8s ease-out forwards;
+  animation-delay: 0.3s; /* slight delay for smoothness */
+}
+
+
+/* end of code */
+
+/* code for img animation */
+/* Fade-in + zoom animation */
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply to Dragon Ball image */
+.dragon-ball-head-img img {
+  opacity: 0;
+  animation: fadeZoomIn 0.8s ease-out forwards;
+  animation-delay: 0.5s; /* start after heading animation */
+  transition: transform 0.3s ease;
+}
+
+/* Hover zoom effect */
+.dragon-ball-head-img img:hover {
+  transform: scale(1.05);
+}
+
+
+/* end of code */
+
+.head-info h2 {
+  color: white;
+  padding: 30px;
+}
+
+.dragon-ball-head-img img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.buttom-img-info p {
+  color: yellow;
+  font-size: 0.9rem;
+  padding: 15px;
+}
+
+.green-span {
+  color: rgb(55, 240, 55);
+}
+
+.blue-span {
+  color: blue;
+}
+
+.red-span {
+  color: red;
+}
+
+.border-buttom {
+  border-bottom: 1px solid yellow;
+  margin: 20px 20px;
+}
+
+.anime-series-info h6 {
+  color: red;
+}
+
+.anime-series-info-yellow-span {
+  color: yellow;
+}
+
+.full-name h6,
+.season h6,
+.run-time,
+.episodes,
+.network,
+.year,
+.language,
+.genre,
+.rating,
+.quality,
+.synopsis {
+  margin-top: 20px;
+  color: #339966;
+  font-size: 0.9rem;
+}
+
+.synopsis span {
+  color: red;
+}
+
+.dragon-ball-click-here p {
+  color: white;
+}
+
+.watch-dragon-ball-z-kai h6 {
+  color: blue;
+  font-size: 1.3rem;
+}
+
+.watch-dragon-ball-img {
+  display: flex;
+  justify-content: center;
+}
+
+.watch-dragon-ball-img img {
+  width: 200px;
+  border-radius: 10px;
+  align-content: center;
+}
+
+.watch-download-hindi h6 {
+  color: blue;
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.episodes-num-dev p {
+  font-size: 0.8rem;
+  color: #fff603;
+}
+
+#for-green-color-hindi {
+  color: #98cb00;
+}
+
+#for-red-color-of-watch-multi {
+  color: red;
+}
+
+.purple-color-for-windingup {
+  color: rgb(233, 16, 233);
+}
+
+footer {
+  background-color: black;
+}
+
+.footer-info-color {
+  color: #fff603;
+}
+
+/* Media Query For IPAD */
+@media screen and (min-width: 768px) {
+  .search-box {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 450px;
+    background: black;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition:
+      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-box.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  nav {
+    height: 70px;
+  }
+
+  .episodes-num-dev p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Media Query For PC 1024 */
+@media screen and (min-width: 1024px) {
+  .search-box {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 700px;
+    background: black;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition:
+      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-box.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  .episodes-num-dev p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media Query For PC 1080 */
+@media screen and (min-width: 1080px) {
+  .search-box {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 950px;
+    background: black;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition:
+      opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .search-box.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  .episodes-num-dev p {
+    font-size: 1rem;
+  }
+}
