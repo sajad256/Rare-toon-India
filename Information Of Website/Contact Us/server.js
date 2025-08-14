@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -62,6 +63,16 @@ app.post("/contact", async (req, res) => {
     console.error("❌ Error saving contact:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
+});
+
+// ===============================
+// Serve Frontend
+// ===============================
+// Adjust the path if your frontend files are somewhere else
+app.use(express.static(path.join(__dirname, "../../")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../index.html"));
 });
 
 // ===============================
