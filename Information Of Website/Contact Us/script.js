@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = document.getElementById("message").value.trim();
 
     try {
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://rare-toon-india.onrender.com/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, subject, message }),
